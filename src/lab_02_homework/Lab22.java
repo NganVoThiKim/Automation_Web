@@ -13,7 +13,7 @@ public class Lab22 {
          * 2. If inputNumber = 0 -> Print out "the number 0 is either even or odd"
          * 3. Else inputNumber != 0 -> Continue check
          * 4. If inputNumber is divisible by 2 -> Print out "even number"
-         * 3. Else -> Print out "odd number"
+         * 3. Else -> Print out "odd number" ***
          **/
 
         System.out.print("Please input number: ");
