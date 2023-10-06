@@ -81,30 +81,40 @@ public class Lab4 {
         System.out.print("Please input element quantity of array list: ");
         int quantityElement = scanner.nextInt();
         List<Integer> myList = generateArrayListWithRandomNumber(quantityElement);
-        printMenu();
 
-        System.out.print("Please input your option: ");
-        int userInputOption = scanner.nextInt();
-        switch (userInputOption) {
-            case 1:
-                System.out.print("All numbers in array list: " + myList.toString());
+        boolean isContinuing = true;
+        printMenu();
+        while (isContinuing) {
+            System.out.print("\nPlease input your option: ");
+            int userInputOption = scanner.nextInt();
+            switch (userInputOption) {
+                case 1:
+                    System.out.println("All numbers in array list: " + myList.toString());
+                    break;
+                case 2:
+                    int maxValue = findMaxValue(myList);
+                    System.out.println("Maximum value is: " + maxValue);
+                    break;
+                case 3:
+                    int minValue = findMinValue(myList);
+                    System.out.println("Minimum value is: " + minValue);
+                    break;
+                case 4:
+                    System.out.print("Please input number which need to search: ");
+                    int searchedNum = scanner.nextInt();
+                    searchNumber(myList, searchedNum);
+                    break;
+                case 0:
+                    isContinuing = false;
+                    break;
+                default:
+                    System.out.println("Wrong option, please re-input: ");
+            }
+            if (isContinuing == false) {
                 break;
-            case 2:
-                int maxValue = findMaxValue(myList);
-                System.out.print("Maximum value is: " + maxValue);
-                break;
-            case 3:
-                int minValue = findMinValue(myList);
-                System.out.print("Minimum value is: " + minValue);
-                break;
-            case 4:
-                System.out.print("Please input number which need to search: ");
-                int searchedNum = scanner.nextInt();
-                searchNumber(myList, searchedNum);
-                break;
-            default:
-                System.out.println("Wrong option, please re-input");
+            }
         }
+
     }
 
     public static List<Integer> generateArrayListWithRandomNumber(int quantityElement) {
@@ -114,7 +124,7 @@ public class Lab4 {
             int randomNum = random.nextInt(1000);
             myList.add(randomNum);
         }
-        System.out.print("All numbers in array list: " + myList.toString() + "\n");
+        System.out.println("All numbers in array list: " + myList.toString() + "\n");
         return myList;
     }
 
@@ -124,6 +134,7 @@ public class Lab4 {
         System.out.println("2. Print maximum value");
         System.out.println("3. Print minimum value");
         System.out.println("4. Search number");
+        System.out.println("0. Exit");
     }
 
     public static int findMaxValue(List<Integer> myList) {
