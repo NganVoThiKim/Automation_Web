@@ -1,6 +1,5 @@
-package lab_03_homework;
+package lab_03;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Lab31 {
