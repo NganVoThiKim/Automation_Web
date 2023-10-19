@@ -1,4 +1,4 @@
-package lab_71_homework;
+package lab_71;
 
 public class FTE extends Employee71 {
     @Override

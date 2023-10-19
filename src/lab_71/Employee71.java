@@ -1,6 +1,7 @@
-package lab_71_homework;
+package lab_71;
 
 public class Employee71 {
+    // Class  level/ Class scope
     private String name;
     private int quantityEmployee;
     private int salary;
