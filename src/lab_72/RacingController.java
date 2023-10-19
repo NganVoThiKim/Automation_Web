@@ -1,4 +1,4 @@
-package update_lab_72;
+package lab_72;
 
 
 import java.util.List;
