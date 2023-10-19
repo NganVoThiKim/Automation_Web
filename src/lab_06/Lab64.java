@@ -1,4 +1,4 @@
-package lab_06_homework;
+package lab_06;
 
 public class Lab64 {
     public static void main(String[] args) {

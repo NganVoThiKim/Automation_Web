@@ -1,4 +1,4 @@
-package lab_06_homework;
+package lab_06;
 
 import java.util.Scanner;
 

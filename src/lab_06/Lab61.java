@@ -1,8 +1,4 @@
-package lab_06_homework;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package lab_06;
 
 public class Lab61 {
     public static void main(String[] args) {
