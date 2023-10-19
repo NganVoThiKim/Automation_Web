@@ -1,24 +1,27 @@
 package lab_09;
 
+import update_lab_09.Animal;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class RacingController {
-    public static boolean filterRaceableAnimal(boolean isFlyable) {
-        if (!isFlyable) {
-            return true;
+    public static List<AnimalBuilder> filterRaceableAnimal(List<AnimalBuilder> animalList) {
+        List<AnimalBuilder> raceableAnimalList = new ArrayList<>();
+        for (AnimalBuilder animalBuilder : animalList) {
+            if (!animalBuilder.isFlyable()) {
+                raceableAnimalList.add(animalBuilder);
+            }
         }
-        return false;
+        return raceableAnimalList;
     }
 
-    public static Animal getWinner(List<Animal> animalList) {
-        Animal winner = animalList.get(0);
-        for (Animal animal : animalList) {
-            if (filterRaceableAnimal(animal.isFlyable())) {
-                if (animal.getSpeed() > winner.getSpeed()) {
-                    winner = animal;
-                }
+    public static AnimalBuilder getWinner(List<AnimalBuilder> animalList) {
+        AnimalBuilder winner = animalList.get(0);
+        for (AnimalBuilder animal : animalList) {
+            if (animal.getSpeed() > winner.getSpeed()) {
+                winner = animal;
             }
-
         }
         return winner;
     }
